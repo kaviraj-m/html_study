@@ -1,0 +1,93 @@
+Module 6: HTML Tables
+In this module, we will explore how to create and structure tables in HTML using basic table tags such as <table>, <tr>, <td>, <th>, and more advanced features like merging cells with colspan and rowspan, and adding captions using the <caption> tag.
+
+6.1 Creating Simple Tables (<table>)
+The <table> element in HTML is used to define a table. Inside this tag, table rows are defined using <tr>, and table data cells are defined using <td>.
+Example of a basic table structure:
+<table>
+    <tr>
+        <td>Row 1, Column 1</td>
+        <td>Row 1, Column 2</td>
+    </tr>
+    <tr>
+        <td>Row 2, Column 1</td>
+        <td>Row 2, Column 2</td>
+    </tr>
+</table>
+
+6.2 Table Rows (<tr>) and Table Data Cells (<td>)
+<tr> (Table Row): Defines a row in a table.
+<td> (Table Data): Defines a cell within a row.
+Example of a table with rows and cells:
+<table border="1">
+    <tr>
+        <td>1, 1</td>
+        <td>1, 2</td>
+    </tr>
+    <tr>
+        <td>2, 1</td>
+        <td>2, 2</td>
+    </tr>
+</table>
+In this example, each row (<tr>) has two table data cells (<td>).
+
+6.3 Table Headers (<th>)
+The <th> tag defines header cells in the table. These are typically displayed as bold and centered by default. Headers are often placed in the first row (or column) of the table.
+Example with table headers:
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>28</td>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>32</td>
+    </tr>
+</table>
+
+6.4 Merging Cells (colspan, rowspan)
+colspan: Merges multiple columns into a single cell.
+rowspan: Merges multiple rows into a single cell.
+Example of merging columns and rows:
+<table border="1">
+    <tr>
+        <th colspan="2">Personal Info</th> <!-- Merging two columns -->
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>John</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Details</td> <!-- Merging two rows -->
+        <td>Age: 28</td>
+    </tr>
+    <tr>
+        <td>Location: USA</td>
+    </tr>
+</table>
+In this example:
+The first row merges two columns with colspan="2".
+The third cell in the second row spans two rows with rowspan="2".
+
+6.5 Adding Captions to Tables (<caption>)
+The <caption> tag is used to add a title or description to a table. This tag is placed directly after the opening <table> tag.
+Example with a table caption:
+<table border="1">
+    <caption>Student Information</caption> <!-- Caption for the table -->
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>28</td>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>32</td>
+    </tr>
+</table>

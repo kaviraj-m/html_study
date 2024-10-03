@@ -1,0 +1,30 @@
+Module 4: HTML Links
+
+4.1 Anchor Tag (<a>)
+The Anchor Tag (<a>) is used to create hyperlinks in HTML. It can link to external websites, internal sections of the same page, email addresses, documents, and files.
+Example of a basic anchor tag:
+<a href="https://www.example.com">Visit Example</a>
+
+4.2 Linking to External Pages, Internal Sections, and Emails
+External Pages: You can link to an external webpage by providing the URL in the href attribute.
+Example:
+<a href="https://www.google.com">Go to Google</a>
+Internal Sections: To link to a specific section within the same page, use an anchor link with the id attribute.
+Example:
+<!-- Target section -->
+<h2 id="section1">Section 1</h2>
+<!-- Link to the section -->
+<a href="#section1">Go to Section 1</a>
+Emails: To create a link that opens the user's default email client, use the mailto: protocol.
+Example:
+<a href="mailto:example@example.com">Email Us</a>
+
+4.3 Opening Links in New Tabs (target="_blank")
+To open a link in a new browser tab or window, add the target="_blank" attribute to the anchor tag.
+Example:
+<a href="https://www.example.com" target="_blank">Open Example in New Tab</a>
+
+4.4 Linking to Documents and Files
+You can link to documents (like PDFs, Word files, etc.) using the same anchor tag approach. Ensure the href attribute points to the document's location.
+Example:
+<a href="files/sample.pdf">Download Sample PDF</a>

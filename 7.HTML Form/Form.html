@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+
+    <h1>Module 7: HTML Forms</h1>
+
+    <!-- Basic Form Structure -->
+    <form action="/submit" method="post">
+        
+        <!-- Input: Text with Label -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+        <!-- Input: Password with Label -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+        <!-- Input: Radio Button with Label -->
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <!-- Input: Checkbox with Label -->
+        <label for="subscribe">Subscribe:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+
+        <!-- Textarea -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Write your message..."></textarea>
+
+        <!-- Dropdown List -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="canada">Canada</option>
+        </select>
+
+        <!-- Fieldset Grouping -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+            
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+        </fieldset>
+
+        <!-- Submit and Reset Buttons -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+Module 3: HTML Lists
+3.1 Unordered Lists (<ul>)
+Unordered Lists are used to create a list of items where the order does not matter. Each item in the list is typically marked with a bullet point.
+Example:
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+3.2 Ordered Lists (<ol>)
+Ordered Lists are used to create a list of items where the order is important. Each item is numbered automatically.
+Example:
+<ol>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ol>
+
+3.3 List Items (<li>)
+List Items are defined using the <li> tag. This tag can be used inside both unordered (<ul>) and ordered (<ol>) lists to represent each item.
+Example of a mixed list:
+<ul>
+    <li>Unordered item 1</li>
+    <li>Unordered item 2</li>
+</ul>
+<ol>
+    <li>Ordered item 1</li>
+    <li>Ordered item 2</li>
+</ol>
+
+3.4 Nested Lists
+Nested Lists are lists that contain other lists inside them. This allows for more complex and hierarchical structures.
+Example:
+<ul>
+    <li>Fruits
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Cherry</li>
+        </ul>
+    </li>
+    <li>Vegetables
+        <ul>
+            <li>Carrot</li>
+            <li>Broccoli</li>
+            <li>Spinach</li>
+        </ul>
+    </li>
+</ul>

@@ -1,0 +1,58 @@
+Module 5: HTML Images
+
+5.1 Embedding Images (<img>)
+The <img> tag is used to embed images in an HTML document. Unlike other HTML elements, the <img> tag is a self-closing tag, meaning it does not require a closing tag.
+Example:
+<img src="image.jpg" alt="Description of Image">
+
+5.2 Image Attributes: src, alt, width, height
+src: This attribute specifies the path to the image file. It can be a relative path (local file) or an absolute path (URL).
+Example:
+<img src="images/photo.jpg" alt="A beautiful scenery">
+alt: This attribute provides alternative text for the image. This text is displayed if the image cannot be loaded and is also useful for screen readers, improving accessibility.
+Example:
+<img src="images/photo.jpg" alt="A beautiful scenery">
+width and height: These attributes specify the width and height of the image in pixels. It’s a good practice to include these attributes to reserve space for the image while it loads.
+Example:
+<img src="images/photo.jpg" alt="A beautiful scenery" width="300" height="200">
+
+5.3 Image Formats and Optimization
+Image Formats: Common image formats used in web development include:
+JPEG: Good for photographs; supports millions of colors but does not support transparency.
+PNG: Supports transparency and is suitable for graphics with fewer colors.
+GIF: Supports animations and is limited to 256 colors.
+SVG: Scalable vector graphics, ideal for logos and icons since they can be resized without loss of quality.
+Optimization: Optimize images for the web to improve loading times and performance. Techniques include:
+Compressing images to reduce file size without significantly affecting quality.
+Using responsive images with the <picture> element or the srcset attribute to provide different images for different screen sizes.
+
+5.4 Adding Favicon to Web Pages
+A favicon (short for "favorite icon") is a small icon displayed in the browser tab next to the page title. It helps users identify and locate your site among multiple tabs.
+To add a favicon, use the <link> tag in the <head> section of your HTML document, pointing to the favicon file (usually a .ico, .png, or .svg file).
+Example:
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+Common Image Formats
+
+1. JPEG (Joint Photographic Experts Group)
+Description: JPEG is a commonly used format for photographic images. It supports millions of colors but does not support transparency. It uses lossy compression, which means some image quality is sacrificed for a smaller file size.
+Use Case: Best for photographs or images with gradients.
+Example: photo.jpg
+<img src="images/photo.jpg" alt="A beautiful landscape in JPEG format">
+
+2. PNG (Portable Network Graphics)
+Description: PNG is a lossless image format that supports transparency. It is ideal for images with sharp edges and flat colors, such as logos and graphics.
+Use Case: Best for images requiring transparency or with text/graphics.
+Example: logo.png
+<img src="images/logo.png" alt="Company Logo in PNG format">
+
+3. GIF (Graphics Interchange Format)
+Description: GIF is a bitmap image format that supports animations and has a limited color palette (256 colors). It is a lossless format, but due to its color limitations, it is not suitable for photographs.
+Use Case: Best for simple graphics and animations.
+Example: animation.gif
+<img src="images/animation.gif" alt="Animated graphic in GIF format">
+
+4. SVG (Scalable Vector Graphics)
+Description: SVG is an XML-based vector image format that is resolution-independent and can be scaled without losing quality. It is ideal for logos, icons, and illustrations.
+Use Case: Best for logos and icons that need to be resized without loss of quality.
+Example: icon.svg
+<img src="images/icon.svg" alt="Scalable vector graphic in SVG format">

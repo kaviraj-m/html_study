@@ -1,0 +1,82 @@
+Module 8: HTML Semantic Elements
+In this module, we'll explore HTML5 semantic elements, which provide meaning and structure to web pages, making them more accessible and easier to understand by both users and search engines. Semantic HTML improves readability and search engine optimization (SEO).
+
+8.1 Introduction to HTML5 Semantic Tags
+HTML5 introduced several semantic elements that define different parts of a web page. These elements give meaning to the structure, unlike non-semantic elements like <div> or <span>, which do not convey specific meaning.
+Here are the key semantic tags introduced in HTML5:
+
+1. <header>
+The <header> element represents the introductory content or a group of introductory content such as logos, navigation links, and headings.
+Example:
+<header>
+    <h1>My Website</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+2. <nav>
+The <nav> element defines a section of navigation links.
+Example:
+<nav>
+    <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+3. <section>
+The <section> element defines a thematic grouping of content. It is typically used to group related content together.
+Example:
+<section>
+    <h2>About Us</h2>
+    <p>We provide high-quality web development services.</p>
+</section>
+
+4. <article>
+The <article> element represents a self-contained piece of content, such as a blog post or news article.
+Example:
+<article>
+    <h2>Blog Post Title</h2>
+    <p>This is the content of the blog post.</p>
+</article>
+
+5. <footer>
+The <footer> element defines the footer of a section or document. It typically contains copyright information, links to privacy policies, or contact details.
+Example:
+<footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+
+6. <aside>
+The <aside> element represents content that is tangentially related to the main content, such as sidebars, advertisements, or related links.
+Example:
+
+<aside>
+    <h3>Related Articles</h3>
+    <ul>
+        <li><a href="#article1">How to Use HTML5</a></li>
+        <li><a href="#article2">Introduction to CSS3</a></li>
+    </ul>
+</aside>
+
+8.2 Difference Between Semantic and Non-Semantic Elements
+Semantic Elements
+Semantic elements clearly describe their meaning both to the browser and the developer. They are easy to understand and convey the role of the content they wrap.
+Examples of semantic elements:
+<header>
+<article>
+<section>
+<footer>
+Non-Semantic Elements
+Non-semantic elements do not provide any information about the structure or meaning of the content they contain. They are used mainly for styling or layout purposes.
+Examples of non-semantic elements:
+<div>
+<span>
+Comparison:
+Semantic HTML: Improves accessibility, SEO, and code readability.
+Non-Semantic HTML: Provides no contextual meaning, mainly used for layout and styling.
+ 

@@ -1,0 +1,112 @@
+Module 7: HTML Forms
+In this module, we will learn how to create and manage forms using HTML. Forms are essential for collecting user input, and we'll explore different form elements such as text inputs, buttons, checkboxes, radio buttons, dropdowns, and more. Let's dive into each element in detail.
+
+7.1 Introduction to Forms (<form>)
+The <form> element is used to collect user input. A form typically contains input elements, labels, and buttons to submit or reset the data.
+Example of a basic form structure:
+<form action="/submit" method="post">
+    <!-- Input fields and buttons go here -->
+</form>
+action: Specifies where to send the form data (URL).
+method: Defines the HTTP method (GET or POST).
+
+7.2 Input Types
+HTML provides a variety of input types, including text, password, radio buttons, checkboxes, etc. These are created using the <input> tag.
+Example of different input types:
+<form action="/submit" method="post">
+    <!-- Text Input -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <!-- Password Input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <!-- Radio Button Input -->
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+
+    <!-- Checkbox Input -->
+    <label for="subscribe">Subscribe:</label>
+    <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+</form>
+Text: <input type="text">
+Password: <input type="password">
+Radio Button: <input type="radio">
+Checkbox: <input type="checkbox">
+Submit: <input type="submit">
+
+7.3 Input Attributes
+HTML input elements can have various attributes to control behavior and appearance.
+name: Identifies the input when data is submitted.
+value: Defines the initial value for the input field.
+placeholder: Displays a short hint inside the input field.
+required: Marks an input field as mandatory.
+Example of using input attributes:
+<form action="/submit" method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+</form>
+
+7.4 Textarea (<textarea>)
+The <textarea> element is used for multi-line text input, unlike the <input> tag, which only accepts single-line input.
+Example of a textarea field:
+<form action="/submit" method="post">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" cols="30" placeholder="Write your message here..."></textarea>
+</form>
+
+7.5 Dropdown Lists (<select>, <option>)
+The <select> tag creates a dropdown list. Each option in the list is represented by the <option> tag.
+Example of a dropdown list:
+<form action="/submit" method="post">
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value="usa">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="canada">Canada</option>
+    </select>
+</form>
+
+7.6 Buttons (<button>, Submit, Reset)
+HTML forms support different types of buttons to perform actions such as submitting or resetting the form.
+Submit Button: Sends the form data to the server.
+Reset Button: Clears all form fields.
+Custom Button: Can be used for custom actions (e.g., form validation).
+Example of form buttons:
+<form action="/submit" method="post">
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+
+    <!-- Reset Button -->
+    <button type="reset">Reset</button>
+</form>
+
+7.7 Grouping Form Elements (<fieldset>, <legend>)
+To group related form elements, use the <fieldset> tag. The <legend> tag provides a caption for the group.
+Example of fieldset and legend:
+<form action="/submit" method="post">
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required>
+    </fieldset>
+</form>
+
+7.8 Labels for Inputs (<label>)
+The <label> tag is used to define a label for an input field, improving form accessibility. The for attribute in the label should match the id of the input field it is associated with.
+Example of using labels:
+<form action="/submit" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+</form>
