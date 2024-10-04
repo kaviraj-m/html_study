@@ -1,0 +1,37 @@
+Module 9: Multimedia in HTML
+In this module, we'll explore how to add and manage multimedia elements in HTML, such as audio, video, embedded content from external sources (e.g., YouTube videos), and external web pages using iframes. Multimedia makes web pages more interactive and engaging for users.
+
+9.1 Adding Audio (<audio>)
+The <audio> element is used to embed sound content in a web page. The controls attribute provides the audio player interface, allowing users to play, pause, and control the volume.
+Example of the <audio> Tag:
+<audio controls>
+    <source src="audio-file.mp3" type="audio/mpeg">
+    <source src="audio-file.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+src: Specifies the path to the audio file.
+type: Defines the MIME type of the audio (e.g., audio/mpeg for MP3 or audio/ogg for OGG).
+controls: Adds the play/pause and volume controls to the audio player.
+
+9.2 Adding Video (<video>)
+The <video> element is used to embed video files in a web page. Like the <audio> element, it can include controls for playback.
+Example of the <video> Tag:
+<video width="400" controls>
+    <source src="video-file.mp4" type="video/mp4">
+    <source src="video-file.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+width: Defines the width of the video player.
+controls: Adds the play/pause, volume, and fullscreen controls.
+Multiple Sources: You can provide multiple video formats for better browser support.
+
+9.3 Embedding YouTube Videos and Other Media
+To embed a YouTube video or other media content in your web page, you can use an <iframe> that links to the media source.
+Example of Embedding a YouTube Video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
+        title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+src: The link to the YouTube video with the video ID.
+allowfullscreen: Allows the video to be displayed in full screen.
+Attributes like allow: Control video features like autoplay, clipboard access, etc.
