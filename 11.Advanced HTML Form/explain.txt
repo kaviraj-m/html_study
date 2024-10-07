@@ -1,0 +1,84 @@
+Module 11: HTML Forms (Advanced)
+In this module, we dive deeper into HTML forms, focusing on advanced form elements and techniques, including hidden fields, form validation, and how to send form data.
+
+11.1 Hidden Fields
+Hidden fields (<input type="hidden">) allow you to include data in forms without displaying it to the user. This is useful for passing data that is not meant to be changed by the user, such as session IDs or tokens.
+Example of Hidden Fields:
+<form action="/submit" method="POST">
+    <input type="hidden" name="userID" value="12345">
+    <input type="submit" value="Submit">
+</form>
+In this example, the hidden field userID has a value of 12345 that will be sent when the form is submitted without the user seeing or modifying it.
+
+11.2 Autofocus, Autocomplete, and Disabled Fields
+These attributes enhance form usability by controlling the behavior and accessibility of form fields.
+Autofocus Attribute:
+The autofocus attribute automatically focuses on a specific input field when the page loads.
+
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" autofocus>
+</form>
+The "Name" input field will be automatically focused when the page loads.
+Autocomplete Attribute:
+The autocomplete attribute allows browsers to suggest previously entered values for input fields, enhancing form-filling speed.
+<form>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="on">
+</form>
+The email field will have autocomplete enabled, helping users fill the form more quickly.
+Disabled Attribute:
+The disabled attribute prevents users from interacting with a specific form element.
+
+<form>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" value="25" disabled>
+</form>
+The "Age" field is disabled and cannot be modified by the user.
+
+11.3 Form Validation Attributes
+HTML5 introduces built-in form validation attributes, which are useful for ensuring data integrity before submission. The most common ones are required, pattern, min, max, and maxlength.
+Required Attribute:
+The required attribute makes a form field mandatory.
+<form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+</form>
+The form won't submit unless the "Username" field is filled out.
+Pattern Attribute:
+The pattern attribute specifies a regular expression that the input field's value must match.
+<form>
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+</form>
+The "Phone" field requires exactly 10 numeric digits.
+Min and Max Attributes:
+These attributes specify the minimum and maximum values for numerical input fields.
+<form>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100" required>
+</form>
+The "Age" field requires the value to be between 18 and 100.
+
+11.4 Sending Form Data
+Form data is sent to a server when the form is submitted. The <form> element’s action and method attributes define where the data is sent and how it is transmitted.
+Form Action:
+The action attribute specifies the URL where the form data is sent when the form is submitted.
+
+<form action="/submit_form" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <input type="submit" value="Submit">
+</form>
+In this example, the form data is sent to /submit_form when submitted.
+Form Method:
+The method attribute specifies how the data is sent to the server. There are two common methods:
+GET: Appends the form data to the URL as query parameters. It is used for retrieving data and is less secure because form data is visible in the URL.
+POST: Sends the form data in the request body, making it more secure. It is used for sending sensitive or large amounts of data.
+
+<form action="/submit_form" method="POST">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <input type="submit" value="Submit">
+</form>
+In this example, the form data is sent to the server via a POST request.

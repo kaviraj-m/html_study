@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML Form</title>
+</head>
+<body>
+
+    <h1>Advanced Form Example</h1>
+
+    <!-- Form to capture user data -->
+    <form action="/submit_data" method="POST">
+
+        <!-- Hidden Field -->
+        <input type="hidden" name="userID" value="12345">
+
+        <!-- Name field with autofocus -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" autofocus required>
+        <br><br>
+
+        <!-- Email field with autocomplete -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" autocomplete="on" required>
+        <br><br>
+
+        <!-- Phone field with pattern validation -->
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
+        <br><br>
+
+        <!-- Age field with min and max validation -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" required>
+        <br><br>
+
+        <!-- Disabled field -->
+        <label for="referral">Referral Code:</label>
+        <input type="text" id="referral" name="referral" value="AUTOGEN123" disabled>
+        <br><br>
+
+        <!-- Submit button -->
+        <input type="submit" value="Submit Form">
+    </form>
+
+</body>
+</html>

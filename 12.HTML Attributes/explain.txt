@@ -1,0 +1,58 @@
+Module 12: HTML Attributes
+In this module, we'll explore different types of HTML attributes. Attributes provide additional information about HTML elements, helping to customize their behavior, style, and data. We'll cover global attributes, data attributes, and boolean attributes.
+12.1 Global Attributes
+Global attributes are common to all HTML elements and can be used to enhance accessibility, styling, or identification of elements.
+1. id Attribute
+The id attribute uniquely identifies an HTML element. It can be used for linking, styling, or JavaScript.
+
+<p id="intro">This is an introduction paragraph.</p>
+The id value must be unique within the HTML document. In this example, the <p> element is given the unique ID of "intro."
+2. class Attribute
+The class attribute allows you to apply styles or target multiple elements for styling or JavaScript manipulation.
+
+<p class="highlight">This is a highlighted paragraph.</p>
+Multiple elements can share the same class name, unlike id. In this example, the "highlight" class can be used for styling multiple elements.
+3. style Attribute
+The style attribute allows you to apply inline CSS to a specific HTML element.
+
+<p style="color: blue;">This text is blue.</p>
+This example changes the color of the paragraph text to blue using inline CSS.
+4. title Attribute
+The title attribute provides additional information when a user hovers over the element.
+
+<a href="https://www.example.com" title="Go to Example Website">Example</a>
+When a user hovers over the link, a tooltip with the text "Go to Example Website" will appear.
+
+12.2 Data Attributes (data-*)
+Data attributes allow you to store extra information directly on HTML elements. These attributes are user-defined and begin with data-. They are useful for storing custom data that can be accessed via JavaScript.
+Example of Data Attributes:
+
+<div id="user-profile" data-user-id="12345" data-role="admin">
+    Welcome, Admin!
+</div>
+In this example, the data-user-id and data-role attributes store custom information related to the user profile.
+These attributes can be accessed in JavaScript like this:
+
+var userId = document.getElementById('user-profile').getAttribute('data-user-id');
+console.log(userId);  // Outputs: 12345
+
+12.3 Boolean Attributes
+Boolean attributes represent attributes that are either true or false. These attributes don't need a value—if the attribute is present, it is considered true; if absent, it is considered false.
+
+1. disabled Attribute
+The disabled attribute prevents the user from interacting with the element.
+
+<button disabled>Submit</button>
+In this example, the button is disabled, meaning the user cannot click it.
+
+2. checked Attribute
+The checked attribute is used in checkboxes and radio buttons to specify the default checked state.
+
+<input type="checkbox" checked> Accept Terms and Conditions
+This checkbox will be checked by default when the page loads.
+
+3. readonly Attribute
+The readonly attribute prevents the user from modifying the value of an input field, but it remains visible and selectable.
+
+<input type="text" value="Read-only value" readonly>
+In this example, the input field's value cannot be changed by the user.

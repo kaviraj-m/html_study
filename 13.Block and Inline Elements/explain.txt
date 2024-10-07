@@ -1,0 +1,69 @@
+Module 13: HTML Block and Inline Elements
+In this module, we will explore the difference between block-level and inline-level elements in HTML. Understanding this distinction helps in structuring web pages and controlling the layout of your content.
+
+13.1 Difference Between Block-Level and Inline-Level Elements
+Block-Level Elements:
+Block-level elements are displayed as blocks, meaning they take up the full width of their container (parent element) by default.
+These elements always start on a new line and can contain other block-level or inline elements.
+Block-level elements affect the layout significantly because they cause a "block" of space to be taken up.
+
+Inline-Level Elements:
+Inline elements do not start on a new line and only take up as much width as necessary.
+These elements do not affect the surrounding elements' layout as significantly as block-level elements.
+Inline elements typically sit inside block elements and can be nested within other inline elements, but they cannot contain block elements.
+
+13.2 Examples of Block-Level Elements
+Block elements are commonly used to define large sections or containers in a webpage. Below are some examples:
+
+1. <div> (Division)
+The <div> element is a generic container used for grouping other elements. It is a block-level element.
+
+<div>
+    This is a block-level element that takes up the full width.
+</div>
+
+2. <section> (Section)
+The <section> element defines a section of the document, such as a group of related content.
+
+<section>
+    <h2>Section Heading</h2>
+    <p>This is a section block-level element.</p>
+</section>
+
+3. <header> (Header)
+The <header> element represents the introductory content or a set of navigation links.
+
+<header>
+    <h1>Website Title</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+Other Block-Level Elements:
+<article>: Represents an independent piece of content.
+<footer>: Defines a footer for a document or section.
+<aside>: Defines content related to the main content, like sidebars.
+13.3 Examples of Inline Elements
+Inline elements are commonly used for styling small portions of text or inserting images, links, and other small content into the flow of text. Below are some examples:
+1. <span> (Span)
+The <span> element is used to group inline elements for styling purposes.
+
+<p>This is a <span style="color: blue;">blue</span> word within a paragraph.</p>
+The <span> tag allows you to apply styles or manipulate small parts of text without disrupting the paragraph's flow.
+
+2. <a> (Anchor)
+The <a> element creates a hyperlink, which is inline by default.
+
+<p>Visit <a href="https://www.example.com">Example Website</a> for more information.</p>
+The link does not break the flow of the text and is displayed inline.
+
+3. <img> (Image)
+The <img> element inserts an image and is also inline by default.
+
+<p>This is an image: <img src="example.jpg" alt="Example Image"></p>
+The image is displayed inline with the text, without causing the text to break onto a new line.
+Other Inline Elements:
+<em>: Italicizes text for emphasis.
+<strong>: Boldens text for strong emphasis.
+<abbr>: Represents abbreviations.

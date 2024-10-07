@@ -1,0 +1,131 @@
+Module 14: HTML5 APIs (Overview)
+In this module, we explore some of the key HTML5 APIs that enhance the functionality of web pages, making them more interactive and capable of handling complex tasks like geolocation, storage, and drag-and-drop features. Each API offers a specific functionality that can be used in a wide variety of web applications.
+
+14.1 Geolocation API
+The Geolocation API allows a web application to obtain the geographical location of a user. It is commonly used in location-based services, like showing the user's location on a map, providing directions, or finding nearby places.
+Key Methods:
+getCurrentPosition(): Retrieves the current geographical position of the user.
+watchPosition(): Continuously retrieves updates to the user's position as it changes.
+Example: Get Current Position
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Example</title>
+</head>
+<body>
+    <h1>Geolocation API</h1>
+    <button onclick="getLocation()">Get My Location</button>
+    <p id="location"></p>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("location").innerHTML = 
+                "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+</html>
+This code retrieves the user's current location and displays the latitude and longitude on the webpage.
+
+14.2 Web Storage API (LocalStorage and SessionStorage)
+The Web Storage API provides a way to store data locally in the user's browser. It includes two types of storage:
+LocalStorage: Stores data with no expiration time, meaning data persists even after the browser is closed.
+SessionStorage: Stores data for the duration of the page session. The data is deleted when the session ends (e.g., when the browser tab is closed).
+Example: LocalStorage
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Example</title>
+</head>
+<body>
+    <h1>Web Storage API: LocalStorage</h1>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="saveData()">Save Name</button>
+    <button onclick="loadData()">Load Name</button>
+    <p id="display"></p>
+
+    <script>
+        function saveData() {
+            let name = document.getElementById("username").value;
+            localStorage.setItem("userName", name);
+        }
+
+        function loadData() {
+            let storedName = localStorage.getItem("userName");
+            document.getElementById("display").innerHTML = storedName ? "Hello, " + storedName : "No name stored.";
+        }
+    </script>
+</body>
+</html>
+The above example saves the user's name to LocalStorage and allows it to be retrieved even after the page is refreshed.
+
+14.3 Drag-and-Drop API
+The Drag-and-Drop API enables drag-and-drop functionality, allowing users to drag elements from one part of a webpage and drop them in another. This is useful in creating interactive applications like file uploaders, image galleries, or organizational tools.
+Example: Basic Drag-and-Drop
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop API</title>
+    <style>
+        #drag1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+        #dropzone {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #aaa;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drag-and-Drop API</h1>
+    <div id="drag1" draggable="true" ondragstart="drag(event)">Drag me</div>
+    <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here</div>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            let data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+</html>
+The above example allows an element to be dragged and dropped into a specific drop zone.
+Summary of HTML5 APIs:
+Geolocation API: Provides the user's geographic location.
+Web Storage API: Allows for local and session-based data storage in the browser.
+Drag-and-Drop API: Enables drag-and-drop functionality for moving elements within the webpage.
+These APIs enhance interactivity and user experience in web applications.

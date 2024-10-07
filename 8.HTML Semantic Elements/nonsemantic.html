@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Non-Semantic HTML Example</title>
+    <style>
+        /* Basic styling for layout */
+        .header {
+            background-color: #224581;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar div {
+            display: inline;
+            margin-right: 15px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            background-color: #f4f4f4;
+            margin: 20px 0;
+            padding: 15px;
+        }
+        .image {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .image img {
+            width: 300px;
+            height: auto;
+        }
+        .form-container {
+            background-color: #ddd;
+            padding: 15px;
+        }
+        .footer {
+            background-color: #2C2C2C;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer span {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Non-Semantic Header -->
+    <div class="header">
+        <h1>My Website</h1>
+        <p>Welcome to the non-semantic web page</p>
+    </div>
+
+    <!-- Non-Semantic Navigation Bar -->
+    <div class="navbar">
+        <div><a href="#">Home</a></div>
+        <div><a href="#">About</a></div>
+        <div><a href="#">Services</a></div>
+        <div><a href="#">Contact</a></div>
+    </div>
+
+    <!-- Non-Semantic Main Content Section -->
+    <div class="content">
+
+        <!-- Introduction Section -->
+        <div class="section">
+            <h2>About Us</h2>
+            <p>We provide various web development services using both modern and traditional techniques. This page demonstrates a simple layout using non-semantic HTML elements like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code>.</p>
+        </div>
+
+        <!-- Services Section -->
+        <div class="section">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Graphic Design</li>
+                <li>SEO Optimization</li>
+                <li>Digital Marketing</li>
+            </ul>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image">
+            <h3>Our Recent Project</h3>
+            <img src="https://via.placeholder.com/300" alt="Sample Project Image">
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="section form-container">
+            <h3>Contact Us</h3>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Non-Semantic Footer -->
+    <div class="footer">
+        <p>&copy; 2024 My Website | Designed by <span>Web Development Co.</span></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+Module 10: HTML Metadata and SEO
+Metadata in HTML provides essential information about a web page to browsers, search engines, and other web services. It doesn't affect the content displayed on the page but is crucial for search engine optimization (SEO) and proper page rendering on different devices.
+
+10.1 Meta Tags (<meta>)
+Meta tags offer metadata about an HTML document. They're always placed inside the <head> section and can define character encoding, page descriptions, keywords for search engines, and more.
+Common Meta Tags:
+Character Encoding (charset):
+Defines the character set used in the document, ensuring that special characters (like accents) are rendered correctly.
+The standard charset for HTML5 is UTF-8.
+<meta charset="UTF-8">
+Description (description):
+Provides a brief description of the web page, often used by search engines to show snippets in search results.
+Important for SEO because it impacts the page's click-through rate.
+<meta name="description" content="Learn HTML with this comprehensive guide. Discover tags, attributes, and more.">
+Keywords (keywords):
+A list of keywords relevant to the page's content (less used by modern search engines, but still relevant for some).
+<meta name="keywords" content="HTML, web development, tags, elements, attributes">
+Author (author):
+Specifies the author of the web page.
+<meta name="author" content="John Doe">
+Viewport (viewport):
+This tag controls the layout on mobile browsers. It's essential for responsive web design.
+It helps ensure the page scales correctly on different screen sizes, improving the user experience on mobile devices.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+10.2 Page Title (<title>)
+The <title> element defines the title of the web page, displayed in the browser tab and used by search engines as the primary title in search results. It's a critical element for both user experience and SEO.
+Example of a Page Title:
+<title>Complete Guide to HTML</title>
+Best Practices:
+Keep the title concise (50-60 characters).
+Include primary keywords relevant to the page content.
+Ensure each page has a unique title.
+
+10.3 SEO Best Practices for HTML
+Search Engine Optimization (SEO) helps your website rank higher on search engines. Effective use of meta tags, semantic elements, and other HTML features can improve the visibility and relevance of your web page.
+Key SEO Practices:
+Use Semantic HTML:
+Use semantic elements like <header>, <section>, <article>, and <footer> for better content structure.
+Search engines better understand the context of the page's content when it's properly structured
+<article>
+    <header>
+        <h1>What is HTML?</h1>
+    </header>
+    <p>HTML stands for HyperText Markup Language...</p>
+</article>
+Optimize Meta Tags:
+Use descriptive and concise <meta> descriptions with relevant keywords.
+Avoid keyword stuffing. Use natural language in descriptions.
+Optimize for Mobile:
+Ensure the <meta name="viewport"> tag is used for responsive design.
+Mobile-friendly pages rank better in search engines.
+Use Alt Attributes for Images:
+Provide meaningful alt attributes for images, which help search engines understand the content and improve accessibility for users with disabilities.
+<img src="html-logo.png" alt="HTML logo">
+Internal Linking:
+Use internal links to help search engines and users navigate your website easily.
+Ensure each link is descriptive (e.g., avoid using "Click here").
+Headings (<h1>, <h2>, etc.):
+Use heading tags appropriately. There should be only one <h1> per page, which is the main title, followed by subheadings (<h2>, <h3>, etc.).
+<h1>Introduction to HTML</h1>
+<h2>What is HTML?</h2>
