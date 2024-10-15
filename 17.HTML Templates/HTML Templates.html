@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Templates Example</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Template Example</h1>
+
+    <!-- Template Definition -->
+    <template id="cardTemplate">
+        <div class="card">
+            <h2>Card Title</h2>
+            <p>This is a reusable card component.</p>
+        </div>
+    </template>
+
+    <div id="cardContainer"></div>
+
+    <button onclick="addCard()">Add Card</button>
+
+    <script>
+        // Function to add card template to the DOM
+        function addCard() {
+            // Get the template content
+            const template = document.getElementById('cardTemplate');
+            const cardContent = template.content.cloneNode(true);
+
+            // Insert the content into the card container
+            document.getElementById('cardContainer').appendChild(cardContent);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop API</title>
+    <style>
+        /* Style for the draggable box */
+        #drag1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /* Style for the drop zone */
+        #dropzone {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #aaa;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drag-and-Drop API</h1>
+
+    <!-- The draggable element -->
+    <div id="drag1" draggable="true" ondragstart="drag(event)">Drag me</div>
+    
+    <!-- The drop zone where the element can be dropped -->
+    <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here</div>
+
+    <script>
+        // Allow elements to be dropped in the drop zone
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        // Function to handle the drag event
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);  // Pass the element's id as drag data
+        }
+
+        // Function to handle the drop event
+        function drop(event) {
+            event.preventDefault();
+            let data = event.dataTransfer.getData("text");  // Retrieve the dragged element's id
+            event.target.appendChild(document.getElementById(data));  // Append the dragged element to the drop zone
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+Module 15: HTML Entities
+HTML entities are used to display reserved characters (characters that have a special meaning in HTML) or characters that cannot be typed directly. These entities start with an ampersand (&) and end with a semicolon (;). For example, the < character is reserved in HTML because it is used to define tags, so we use the entity &lt; to display it.
+
+Common HTML Entities:
+Here are some frequently used HTML entities:
+
+Entity Code	Description	Display
+&nbsp;	Non-breaking space	 
+&copy;	Copyright symbol	©
+&lt;	Less than symbol	<
+&gt;	Greater than symbol	>
+&amp;	Ampersand	&
+&quot;	Double quotation	"
+
+Example Code Using HTML Entities:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Entities Example</title>
+</head>
+<body>
+    <h1>HTML Entities</h1>
+    
+    <!-- Displaying reserved characters using HTML entities -->
+    <p>
+        In HTML, the less than sign &lt; and the greater than sign &gt; are used for tags.<br>
+        To display an ampersand (&amp;), we use the entity <code>&amp;amp;</code>.
+    </p>
+
+    <!-- Using special characters -->
+    <p>
+        This sentence contains a copyright symbol: &copy; 2024.<br>
+        We can also use a non-breaking space between words like: Hello&nbsp;World!
+    </p>
+
+    <!-- Double quotes using entities -->
+    <p>
+        Double quotes can be represented as: &quot;Hello World&quot;.
+    </p>
+
+</body>
+</html>
+
+Explanation:
+Reserved Characters: In HTML, symbols like <, >, and & have special meanings. Using entities like &lt;, &gt;, and &amp; allows you to display them as plain text.
+Special Characters: The copyright symbol &copy; and non-breaking space &nbsp; are used to represent common symbols and prevent line breaks between specific words.
+Quotation Marks: &quot; is used to display double quotes.
+Using HTML entities is essential for writing clean HTML that displays special characters correctly.

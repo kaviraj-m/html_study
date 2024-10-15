@@ -1,0 +1,50 @@
+Module 16: HTML Comments
+In HTML, comments are used to insert notes, explanations, or other non-executable text into the HTML document. These comments do not appear on the web page when viewed in a browser. They are helpful for developers to document their code and leave helpful notes for themselves or others.
+
+Syntax:
+
+<!-- This is a comment -->
+Anything placed between <!-- and --> will be treated as a comment and ignored by the browser.
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Comments Example</title>
+</head>
+<body>
+
+    <h1>HTML Comments</h1>
+
+    <!-- This is a comment explaining the heading below -->
+    <h2>Welcome to My Website</h2>
+
+    <!-- This is another comment explaining the paragraph below -->
+    <p>This paragraph contains information about the website.</p>
+
+    <!--
+        Multiline comments can be useful for providing detailed explanations.
+        This is a placeholder section for future content.
+    -->
+    <p>Coming Soon...</p>
+
+    <!-- 
+        Important note: Remember to remove any unnecessary comments before deployment
+        to avoid clutter in the code.
+    -->
+    
+</body>
+</html>
+Best Practices for Using Comments:
+Keep Comments Relevant and Clear: Comments should describe what the code does or why it's there, not obvious things. For example, avoid comments like <!-- This is a paragraph --> since the <p> tag already makes that clear.
+
+Use Comments to Explain Complex Logic: If a section of code is particularly complicated or important, use comments to explain its purpose.
+
+Avoid Overusing Comments: Too many comments can clutter the code. Only use them where necessary to explain or clarify parts of the code.
+
+Update Comments Along with Code Changes: Outdated comments can be misleading. Ensure comments stay in sync with code updates.
+
+Remove Comments in Production: In a production environment, unnecessary comments should be removed to reduce file size and improve page load performance.

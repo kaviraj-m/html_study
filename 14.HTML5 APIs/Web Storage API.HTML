@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Example</title>
+</head>
+<body>
+    <h1>Web Storage API: LocalStorage</h1>
+
+    <!-- Input field to enter the name -->
+    <input type="text" id="username" placeholder="Enter your name">
+    
+    <!-- Buttons to save and load the name -->
+    <button onclick="saveData()">Save Name</button>
+    <button onclick="loadData()">Load Name</button>
+    
+    <!-- Paragraph to display the stored name -->
+    <p id="display"></p>
+
+    <script>
+        // Function to save the name in LocalStorage
+        function saveData() {
+            let name = document.getElementById("username").value;
+            localStorage.setItem("userName", name);  // Save the name with the key 'userName'
+        }
+
+        // Function to load the name from LocalStorage
+        function loadData() {
+            let storedName = localStorage.getItem("userName");  // Retrieve the stored name
+            document.getElementById("display").innerHTML = storedName ? "Hello, " + storedName : "No name stored.";
+        }
+    </script>
+</body>
+</html>

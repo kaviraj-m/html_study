@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Example</title>
+</head>
+<body>
+    <h1>Geolocation API</h1>
+    <!-- Button to trigger the location request -->
+    <button onclick="getLocation()">Get My Location</button>
+    
+    <!-- Paragraph to display the location -->
+    <p id="location"></p>
+                         
+    <script>
+        // Function to get the user's location
+        function getLocation() {
+            // Check if the browser supports Geolocation
+            if (navigator.geolocation) {
+                // Get current position
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                // If geolocation is not supported, display an error message
+                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        // Function to display the latitude and longitude
+        function showPosition(position) {
+            document.getElementById("location").innerHTML = 
+                "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+</html>
